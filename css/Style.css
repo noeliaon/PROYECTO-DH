@@ -1,9 +1,6 @@
 * {
   box-sizing: border-box;
 }
-body {
-  font-family: 'Noto sans', sans-serif;
-}
 
 header,
 section {
@@ -13,47 +10,43 @@ section {
 :root {
   --light-black: #2e2c2caf;
   --light-gray: rgba(255, 255, 255, 0.877);
-    --bggradient: linear-gradient(to top, #fff, #111);
+  --bggradient: linear-gradient(to top, #fff, #111);
   --bsgradient: linear-gradient(to bottom, #100075, #100075);
 }
 
-/* Barra Login y Navbar*/
-.barrita {
-background: rgba(0, 0, 0, 0);
+/* NAVBAR */
+
+.navmenu i {
+  margin-right: 5px;
 }
 
-.login a {
-font-size: 14px;
-text-decoration: none;
-}
-
-.barrita a:hover {
-color: #111;
-}
-
-
-#navbarNav {
-  justify-content: center;
-}
 .navbar-brand:hover {
   color: #111;
 }
+.collapse {
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
 
 /* HEADER */
 header a {
   font-family: 'Noto sans', sans-serif;
   font-size: 1.1em;
-  color: #fff;
-  margin-left: 15px;
-  margin-right: 15px;
-}
+  color: #111;
 
-header .navbar-brand {
-  padding-left: 8rem;
 }
 
 header .nav-link:hover {
-  color: black;
+  color: blue;
 }
 
 header .row .col-md-7 {
@@ -66,11 +59,7 @@ header .row .col-md-5 {
 }
 
 header .row .col-md-5 img {
-  width: 90%;
-}
-
-header {
-  background: var(--bggradient);
+  width: 80%;
 }
 
 header .container .col-md-7 {
@@ -97,11 +86,15 @@ header .container .col-md-7 p {
   font-weight: bold;
 }
 
+
+
+
+
 /*SECCION 1*/
 
 .section-1 {
-  padding: 20vmin 0vmin;
-  background: var(--bsgradients)
+  padding: 30vmin 0vmin;
+  background: rgb(242, 242, 242, 0.4);
 }
 
 .section-1 .row .col-md-6 .pray img {
@@ -137,22 +130,16 @@ header .container .col-md-7 p {
   color: rgba(0, 0, 0, 0.5);
 }
 
-/* SECCION 2 */
+
 
 .cover {
   width: 100%;
-  height: 55vmin;
-background: #111;
-  background-position: -24rem -19rem;
-  background-size: 150%;
-  position: relative;
 }
 
 .cover .content {
   width: 100%;
-  height: 90%;
+  height: 50%;
   background: #111;
-  padding-top: 19vmin;
 }
 
 .cover .content h1 {
@@ -160,88 +147,32 @@ background: #111;
   color: whitesmoke;
 }
 
-.purchase h1 {
+.ofertas {
+  background: url(../img/flash.jpg);
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+.ofertas h1 {
   padding-top: 15vmin;
   padding-bottom: 0.1em;
 }
 
-.purchase > p {
-  color: var(--light-black);
+.ofertas p {
   font-size: 3vmin;
   padding-bottom: 10vmin;
 }
 
-.purchase .cards .card {
-  width: 22rem;
-  margin: 3vmin 3vmin;
+.column i {
+  padding: 3px;
 }
 
-.cards div {
-  padding: 0;
-  margin: 0;
-}
 
-.cards .title {
-  background: rgba(208, 241, 241, 0.199);
-  padding: 1.4em 2.5em;
-  font-size: 2vmin;
-}
 
-.card .card-text {
-  padding: 2.5rem 3rem;
-  color: var(--light-black);
-}
 
-.card-body .pricing {
-  background: rgba(208, 241, 241, 0.199);
-  border-top-right-radius: 170px;
-  border-top-left-radius: 170px;
-}
-
-.card-body .pricing > h1 {
-  font-size: 10vmin;
-  padding: 1em 0.5em;
-}
-
-/* SECCION 3 */
-
-.section-3 {
-  height: 70vmin;
-  margin-top: 15vmin;
-  background: #111;
-}
-
-.section-3 .col-md-12 > h1 {
-  padding: 2em 0 0.5em 0;
-  color: whitesmoke;
-  font-size: 6vmin;
-}
-
-.section-3 .col-md-12 p {
-  padding: 0 4em;
-  padding-bottom: 2em;
-  color: var(--light-gray);
-  font-size: 3vmin;
-}
-
-.section-3 .desktop {
-  background: white;
-  display: inline-block;
-  border-radius: 3em;
-  padding: 2vmin 4.5vmin;
-  margin: 1em;
-}
-
-.section-3 .desktop h3 {
-  font-size: 4vmin;
-}
-
-.section-3 .desktop p {
-  font-size: 2vmin;
-}
 /* FOOTER */
 footer {
-  background: #fff;
+  background: #111;
   overflow-x: hidden;
   padding: 14vmin 18vmin;
+  margin-top: 5px;
 }

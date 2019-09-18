@@ -40,12 +40,33 @@
 }
 
 
+
+
+
+
+
+
+
+@media only screen and (max-width: 1170px) {
+
+  .barrita {
+    display: none;
+  }
+
+    .fa-shopping-cart {
+      display: none;
+    }
+
 /* screen seize 575px */
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 720px) {
   .search {
     display: none;
   }
 
+
+      .fa-shopping-cart {
+        display: inline-flex;
+      }
   .barrita {
     display: none;
   }
