@@ -7,47 +7,32 @@ section {
   overflow-x: hidden;
 }
 
-:root {
-  --light-black: #2e2c2caf;
-  --light-gray: rgba(255, 255, 255, 0.877);
-  --bggradient: linear-gradient(to top, #fff, #111);
-  --bsgradient: linear-gradient(to bottom, #100075, #100075);
-}
-
-/* NAVBAR */
-
+/* NAVEGACION */
 .navmenu i {
   margin-right: 5px;
+  padding-left: 5px;
+}
+.navmenu a:hover{
+color: gray;
+}
+.navbar-brand:hover{
+  color: gray;
+}
+.nav-link:hover{
+  color: gray;
 }
 
-.navbar-brand:hover {
-  color: #111;
-}
 .collapse {
   justify-content: center;
 }
-
-
-
-
-
-
-
-
-
-
 
 /* HEADER */
 header a {
   font-family: 'Noto sans', sans-serif;
   font-size: 1.1em;
   color: #111;
-
 }
 
-header .nav-link:hover {
-  color: blue;
-}
 
 header .row .col-md-7 {
   padding: 22vmin 1vmin;
@@ -86,93 +71,71 @@ header .container .col-md-7 p {
   font-weight: bold;
 }
 
-
-
-
-
 /*SECCION 1*/
-
 .section-1 {
-  padding: 30vmin 0vmin;
-  background: rgb(242, 242, 242, 0.4);
+padding: 20vmin 10vmin;
+background: #111;
+font-family: 'Noto sans', sans-serif;
+font-size: 1.1em;
 }
 
-.section-1 .row .col-md-6 .pray img {
+.section-1 img {
   opacity: 0.8;
-  width: 80%;
-  border-radius: 0.2em;
+  width: 100%;
+  border-radius: 0.3em;
 }
 
-.section-1 .row .col-md-6:last-child {
-  position: relative;
+/* SECCION 2 */
+
+.section-2 {
+  background: #fff;
+  margin-top: 5vmin;
+  font-family: 'Noto sans', sans-serif;
+  font-size: 1.3em;
 }
 
-.section-1 .row .col-md-6 .panel {
-  position: absolute;
-  top: 7vmin;
-  left: -18vmin;
-  background: white;
-  border-radius: 3px;
-  text-align: left;
-  padding: 13vmin 5vmin 20vmin 10vmin;
-  box-shadow: 0px 25px 42px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
+.compra {
+  background: url(../img/bici.jpg);
+margin-bottom: 20vmin;
+margin-top: 20vmin;
+  }
 
-.section-1 .row .col-md-6 .panel h1 {
-  font-weight: bold;
-  padding: 0.4em 0;
-  font-size: 2em;
-}
-
-.section-1 .row .col-md-6 .panel p {
-  font-size: 0.9em;
-  color: rgba(0, 0, 0, 0.5);
-}
-
-
-
-.cover {
+.section-2 img {
+  padding: 5%;
   width: 100%;
 }
 
-.cover .content {
-  width: 100%;
-  height: 50%;
-  background: #111;
-}
-
-.cover .content h1 {
+.section-2 h1 {
+  padding-top: 10vmin;
   font-size: 6vmin;
-  color: whitesmoke;
+  padding-bottom: 1em;
+  font-weight: bolder;
 }
 
-.ofertas {
-  background: url(../img/flash.jpg);
-  margin-top: 200px;
-  margin-bottom: 200px;
-}
-.ofertas h1 {
-  padding-top: 15vmin;
-  padding-bottom: 0.1em;
-}
-
-.ofertas p {
+.section-2 p {
   font-size: 3vmin;
-  padding-bottom: 10vmin;
+  padding-bottom: 1vmin;
 }
 
-.column i {
-  padding: 3px;
+/*SECCION 3*/
+
+.section-3 {
+  background: url(../img/bw.jpg);
+    margin-top: 20vmin;
 }
-
-
 
 
 /* FOOTER */
 footer {
   background: #111;
   overflow-x: hidden;
-  padding: 14vmin 18vmin;
-  margin-top: 5px;
+  padding: 5vmin;
+}
+
+.social {
+  padding-top: 40px;
+}
+
+.social i {
+  padding-right: 10px;
 }
