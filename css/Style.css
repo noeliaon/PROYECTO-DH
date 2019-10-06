@@ -8,17 +8,32 @@ section {
 }
 
 /* NAVEGACION */
+.navbar {
+  font-family: 'Noto sans', sans-serif;
+  font-size: 1.1em;
+  background-color: #fff;
+  box-shadow: #111;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #111;
+}
+
 .navmenu i {
-  margin-right: 5px;
-  padding-left: 5px;
+  margin-right: 22px;
+  padding-left: 22px;
 }
-.navmenu a:hover{
-color: gray;
-}
-.navbar-brand:hover{
+
+.navmenu a:hover {
   color: gray;
 }
-.nav-link:hover{
+
+.navbar-brand:hover {
+  color: gray;
+}
+
+.nav-link:hover {
   color: gray;
 }
 
@@ -27,109 +42,73 @@ color: gray;
 }
 
 /* HEADER */
-header a {
-  font-family: 'Noto sans', sans-serif;
-  font-size: 1.1em;
-  color: #111;
+.main-header {
+  background-image: url(../img/urban.jpg);
+  height: 850px;
+  margin-top: 5px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
+.main-header h1 {
+  font-weight: lighter;
+  padding-top: 15%;
 
-header .row .col-md-7 {
-  padding: 22vmin 1vmin;
-  padding-bottom: 35vmin;
-}
-
-header .row .col-md-5 {
-  padding: 4.2vmin 1vmin;
-}
-
-header .row .col-md-5 img {
-  width: 80%;
-}
-
-header .container .col-md-7 {
-  font-family: 'Noto Sans', sans-serif;
-}
-
-header .container .col-md-7 h6 {
-  padding: 1vmin;
-  letter-spacing: 4px;
-}
-
-header .container .col-md-7 h1 {
-  font-size: 9.5vmin;
-  font-weight: bold;
-  padding: 0.1em 0em;
-}
-
-header .container .col-md-7 p {
-  padding: 1vmin 5vmin;
 }
 
 .primary-btn {
   border-radius: 30px;
-  font-weight: bold;
+  font-weight: inherit;
 }
 
-/*SECCION 1*/
-.section-1 {
-padding: 20vmin 10vmin;
-background: #111;
-font-family: 'Noto sans', sans-serif;
-font-size: 1.1em;
+/*  PERFECT BALANCE */
+.balance {
+  margin-top: 4%;
 }
 
-.section-1 img {
-  opacity: 0.8;
+.balance h2 {
+  font-weight: lighter;
+}
+
+.gender img {
   width: 100%;
-  border-radius: 0.3em;
+  padding: 10%;
+
 }
 
-/* SECCION 2 */
+/*LANZAMIENTOS*/
+.lanzamientos {
+  margin-top: 5%;
 
-.section-2 {
-  background: #fff;
-  margin-top: 5vmin;
-  font-family: 'Noto sans', sans-serif;
-  font-size: 1.3em;
 }
 
-.compra {
-  background: url(../img/bici.jpg);
-margin-bottom: 20vmin;
-margin-top: 20vmin;
-  }
+.lanzamientos h1 {
+  font-weight: lighter;
+  margin-bottom: 10%;
+}
 
-.section-2 img {
-  padding: 5%;
+.lanzamientos img {
   width: 100%;
+  display: block;
 }
 
-.section-2 h1 {
-  padding-top: 10vmin;
-  font-size: 6vmin;
-  padding-bottom: 1em;
-  font-weight: bolder;
+
+/* FOOTER BANNER */
+.bannerbottom {
+  margin-top: 10%;
+  background: #111;
 }
 
-.section-2 p {
-  font-size: 3vmin;
-  padding-bottom: 1vmin;
+.bannerbottom h1 {
+  font-weight: lighter;
 }
-
-/*SECCION 3*/
-
-.section-3 {
-  background: url(../img/bw.jpg);
-    margin-top: 20vmin;
-}
-
 
 /* FOOTER */
 footer {
-  background: #111;
+  background: rgba(1, 1, 1, 0.1);
   overflow-x: hidden;
-  padding: 5vmin;
+  padding: 40px;
 }
 
 .social {
@@ -140,16 +119,76 @@ footer {
   padding-right: 10px;
 }
 
+/* LOGIN */
+.login-header {
+  background-image: url(../img/water.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 1%;
+  width: 100%;
+  height: 500px;
+}
+
+.login-header h1 {
+  font-weight: lighter;
+  padding-top: 5%;
+  padding-right: 2%;
+}
+
+.login-header h3 a {
+  color: white;
+
+  font-weight: lighter;
+}
+
+.btn {
+  margin-right: 2.5%;
+}
+
+
+/*REGISTRARSE*/
+.register {
+  margin-top: 1%;
+  background: url(../img/naranja.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.register p {
+  font-weight: lighter;
+  font-size: 24px;
+  color: dark;
+}
+
+.register h1 {
+  font-weight: lighter;
+}
+
+.register .btn {
+  margin-left: 1%;
+}
+
+.register img {
+  width: 100%;
+}
+
+
 /*PREGUNTAS FRECUENTES*/
-#title{
+.cover {
+  background: #fff;
+}
+
+#title {
   font-family: 'Noto sans', sans-serif;
-  font-weight: bolder;
+  font-weight: lighter;
   padding-top: 50px;
   padding-bottom: 20px;
   margin: 15px;
 }
 
-td{
+td {
   font-family: 'Noto sans', sans-serif;
   font-size: 15px;
   color: #000000;
@@ -159,11 +198,60 @@ td{
 
 }
 
-.answer li  {
+.answer li {
   list-style: none;
   margin-right: auto;
   padding: 5px;
   padding-top: 10px;
   padding-bottom: 10px;
+
+}
+
+.answer a {
+  text-decoration: none;
+  color: black;
+}
+
+
+
+
+
+
+
+
+/*RESPONSIVE*/
+@media only screen and (max-width: 991px) {
+  .navmenu {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header .navbar-brand {
+    padding-left: 1rem;
+  }
+
+  .section-3 .row h1 {
+    padding: 6vmin 4vmin;
+  }
+
+  footer .row .col-md-2 {
+    margin-top: 8vmin;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+
+  .fa-shopping-cart {
+    display: inline-flex;
+  }
+}
+
+
+
+@media only screen and (max-width: 320px) {
+  .section-4 .carousel-inner {
+    margin-left: -4vmin;
+  }
 
 }

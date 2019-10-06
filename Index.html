@@ -1,151 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>SMN</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/Style.css" />
-  <link rel="stylesheet" href="css/mobile-style.css">
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>SMN</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet" <link
+          href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/Style.css" />
+       </head>
 
 <body>
+  <!-- NAVEGACION -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
 
-  <header>
 
+      <a class="navbar-brand" href="Index.html">
+        <i class="fab fa-stripe-s fa-2x"></i></i>MN</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-align-right text-dark"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
 
-    <!-- NAVEGACION -->
-    <nav class="navbar navbar-expand-lg">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <i class="fab fa-stripe-s fa-2x"></i></i>MN</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fas fa-align-right text-dark"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-
-          <ul class="navbar-nav mg-auto">
-            <li class="nav-item active"><a class="nav-link" href="#lanzamientos">LANZAMIENTOS</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">HOMBRES</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">MUJERES</a></li>
-            <li><a href="#ofertas" class="nav-link">OFERTAS</a></li>
-          </ul>
-        </div>
-        <div class="navmenu">
-          <a href="#"><i class="fas fa-search"></i></a>
-          <a href="#"><i class="fas fa-shopping-cart"></i></a>
-          <a href="#"><i class="fas fa-user-circle"></i></a>
-        </div>
-    </nav>
+        <ul class="navbar-nav mg-auto">
+          <li class="nav-item active"><a class="nav-link" href="#lanzamientos">LANZAMIENTOS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#hombres">HOMBRES</a></li>
+          <li class="nav-item"><a class="nav-link" href="#mujeres">MUJERES</a></li>
+          <li><a href="#Ofertas" class="nav-link">OFERTAS</a></li>
+        </ul>
+      </div>
+      <div class="navmenu">
+        <a href="#"><i class="fas fa-search"></i></a>
+        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+        <a href="iniciarCuenta.html"><i class="fas fa-user-circle"></i></a>
+      </div>
     </div>
+  </nav>
 
 
-      <!--HEADER -->
-      <header class="mt-5">
-      <div class="container text-center pt-5 mb-5">
+
+  <!--HEADER -->
+  <header class="main-header text-white py-5">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-8 text-right">
+          <h1><i class="fab fa-stripe-s fa-2x py-5"></i>MN SPORTWEAR</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<!-- PERFECT BALANCE-->
+  <section class="balance" class="container-fluid">
+    <div class="row">
+      <div class="col-sm text-center mg-auto text-dark">
+        <h1 class="display-4">PERFECT BALANCE</h1>
+      
+
+      </div>
+    </div>
+  </section>
+  <section class="gender container-fluid">
+    <div class="row">
+      <div class="col-sm">
+        <img src="img/men.jpg" id="hombres">
+      </div>
+      <div class="col-sm">
+        <img src="img/womenathlete.jpg" id="mujeres">
+      </div>
+    </div>
+  </section>
+
+<!--LANZAMIENTOS-->
+
+  <section class="lanzamientos container-fluid text-center" id="lanzamientos">
+    <h1 class="display-4 text-dark">LANZAMIENTOS</h1>
         <div class="row">
-          <div class="col-md-7 col-sm-12  text-dark">
-            <h2><i class="fab fa-stripe-s fa-2x"></i></i>MN</a></h2>
-            <h1>NO LIMITS</h1>
-            <button class="btn btn-dark px-5 py-2 primary-btn">COMPRAR</button>
-          </div>
-          <div class="col-md-5 mt-5 pt-5">
-            <img src="img/bw.jpg ">
+      <div class="col-4">
+        <img src="./img/whiteshoe.jpg" alt="">
+      </div>
+      <div class="col-4">
+        <img src="./img/adidasblack.jpg" alt="">
+      </div>
+      <div class="col-4">
+        <img src="./img/colournike.jpg" alt="">
+      </div>
+    </div>
+  </section>
+
+
+<section class="bannerbottom container-fluid text-right">
+<h1 class="display-5 text-light">DESAFIA TUS LIMITES</h1>
+</section>
+
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container-fluid text-left">
+      <div class="row">
+        <div class="col-sm-4">
+          <h5 class="text-dark">About</h5>
+          <p class="pt-4 text-dark">Copyright ©2019 Todos los Derechos Resevados</p>
+        </div>
+        <div class="col-sm-4 text-center">
+          <a href="PreguntasFrecuentes.html">
+            <h5 class="text-dark">PREGUNTAS FRECUENTES</h5>
+          </a>
+        </div>
+        <div class="col-sm-4 social text-right pt-1">
+          <h5 class="text-dark">FOLLOW US</h5>
+          <p class="text-dark">Social Media</p>
+          <div class="column text-dark">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-youtube"></i>
           </div>
         </div>
       </div>
-    </header>
-
-
-      <!-- SECCION 1 -->
-      <section class="section-1">
-        <div class="container">
-          <div class="row mt-5">
-            <div class="col-md-6">
-              <div class="info-left">
-                <img src="img/run.jpg">
-              </div>
-            </div>
-            <div class="col-md-6 my-auto">
-              <div class="info-right text-white text-right py-5">
-                <h1>LANZAMIENTOS</h1>
-                <br>
-                <p class="h4">Descubrí lo nuevo</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- SECCION 2 -->
-      <section class="section-2 container-fluid">
-        <div class="row">
-          <div class="col-12 text-center compra">
-            <h1 class="text-white">LO QUE BUSCÁS ESTA ACÁ</h1>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-6">
-            <img src="img/minagym.jpg" alt="">
-          </div>
-          <div class="col-6">
-            <img src="img/stairs.jpg" alt="">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-6">
-            <img src="img/mina.jpg" alt="">
-          </div>
-          <div class="col-6">
-            <img src="img/men.jpg" alt="">
-          </div>
-        </div>
-      </section>
-      <!-- SECCION 3 -->
-      <section class="section-3">
-        <div class="container-fluid text-center text-black my-5">
-          <h1>THE FUTURE IS NOW</h1>
-        </div>
-      </section>
-      <!-- FOOTER -->
-      <footer>
-        <div class="container-fluid">
-          <div class="row text-left">
-            <div class="col-md-5 col-sm-5">
-              <h5 class="text-light">About</h5>
-              <p class="pt-4 text-muted">Copyright ©2019 Todos los Derechos Resevados</p>
-            </div>
-            <div class="col-md-5 col-sm-12">
-              <a href="#">
-                <h5 class="text-light">Preguntas Frecuentes</h5>
-              </a>
-            </div>
-            <div class="col-md-2 col-sm-12 social">
-              <h5 class="text-light">Follow Us</h5>
-              <p class="text-muted">Social Media</p>
-              <div class="column text-light">
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-youtube"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+    </div>
+  </footer>
 
 
 
 
 
-      <!--SCRIPTS -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!--SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
 
 </body>
-
 </html>
