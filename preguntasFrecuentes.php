@@ -21,7 +21,7 @@
     <div class="container-fluid">
 
 
-      <a class="navbar-brand" href="Index.html">
+      <a class="navbar-brand" href="index.php">
         <i class="fab fa-stripe-s fa-2x"></i></i>MNK</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,15 +31,15 @@
 
         <ul class="navbar-nav mg-auto">
           <li class="nav-item active"><a class="nav-link" href="#lanzamientos">LANZAMIENTOS</a></li>
-          <li class="nav-item"><a class="nav-link" href="Index.html">HOMBRES</a></li>
-          <li class="nav-item"><a class="nav-link" href="Index.html">MUJERES</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.php">HOMBRES</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.php">MUJERES</a></li>
           <li><a href="#Ofertas" class="nav-link">OFERTAS</a></li>
         </ul>
       </div>
       <div class="navmenu">
         <a href="#"><i class="fas fa-search"></i></a>
         <a href="#"><i class="fas fa-shopping-cart"></i></a>
-        <a href="iniciarCuenta.html"><i class="fas fa-user-circle"></i></a>
+        <a href="iniciarCuenta.php"><i class="fas fa-user-circle"></i></a>
       </div>
     </div>
   </nav>
@@ -93,7 +93,7 @@
       <td class="part-2" width=75% valign=top >
        <section id="answer-1">
               <h3>¿Tengo que registrarme antes de comprar?</h3>
-              Sí, debés tener un usuario SMNK, podés hacerlo ingresando <a href="registrarse.html">haciendo click aquí</a>.
+              Sí, debés tener un usuario SMNK, podés hacerlo ingresando <a href="registrarse.php">haciendo click aquí</a>.
             </section>
             <br></br>
             <section id="answer-2">
@@ -174,7 +174,7 @@
               <p class="pt-4 text-dark">Copyright ©2019 Todos los Derechos Resevados</p>
             </div>
             <div class="col-sm-4 text-center">
-              <a href="PreguntasFrecuentes.html">
+              <a href="preguntasFrecuentes.php">
                 <h5 class="text-dark">PREGUNTAS FRECUENTES</h5>
               </a>
             </div>
