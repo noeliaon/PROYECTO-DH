@@ -5,7 +5,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>SMN</title>
+        <title>SMNK</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
         <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet" <link
@@ -19,10 +19,8 @@
   <!-- NAVEGACION -->
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-
-
-      <a class="navbar-brand" href="Index.html">
-        <i class="fab fa-stripe-s fa-2x"></i></i>MN</a>
+      <a class="navbar-brand" href="index.php">
+        <i class="fab fa-stripe-s fa-2x"></i></i>MNK</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-align-right text-dark"></i>
@@ -39,67 +37,51 @@
       <div class="navmenu">
         <a href="#"><i class="fas fa-search"></i></a>
         <a href="#"><i class="fas fa-shopping-cart"></i></a>
-        <a href="iniciarCuenta.html"><i class="fas fa-user-circle"></i></a>
+        <a href="iniciarCuenta.php"><i class="fas fa-user-circle"></i></a>
       </div>
     </div>
   </nav>
 
 
 
-  <!--HEADER -->
-  <header class="main-header text-white py-5">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-8 text-right" id="smn">
-          <h1><i class="fab fa-stripe-s fa-2x py-5"></i>MN SPORTWEAR</h1>
-        </div>
-      </div>
-    </div>
-  </header>
-
-<!-- PERFECT BALANCE-->
-  <section class="balance" class="container-fluid">
+  <div class="register container-fluid">
     <div class="row">
-      <div class="col-sm text-center mg-auto text-dark">
-        <h1 class="display-4">PERFECT BALANCE</h1>
-      
+      <div class="col-sm-6 text-center text-light">
+        <h1 class="display-2 py-5">REGISTRARSE</h1>
+        <form enctype="text/plain" method="POST" action="index.php">
+          <input type="text" name="user" placeholder="Nombre" minlength="3" required=true><br></br>
+          <input type="text" name="user" placeholder="Apellido" minlength="3" required=true><br></br>
+          <input type="date" name="date" placeholder="Fecha de Nacimiento" minlength="8" required=true><br></br>
+          <input type="email" name="correo" placeholder="E-mail" required=true><br></br>
+          <input type="password" name="direccion" placeholder="Password" minlength="8" required=true><br></br>
+          <input type="password" name="direccion" placeholder="Repetir Password" minlength="8" required=true><br></br>
+                   <br>
+          <a class="btn btn-outline-light" href="#" role="button">Registrarse</a>
 
+          <form action="../../form-result.php" method="post" target="_blank">
+            <br>
+            <br>
+            <p><input type="checkbox" name="Noticias" value="likes"> Me gustaría recibir noticias sobre productos y
+                promociones de SMNK</p></form>
+                <br>
+            <form action="../../form-result.php" method="post" target="_blank">
+             <p><input type="checkbox" name="noticias de Smnk" value="likes"> He leído y acepto las&nbsp;<a href="#"
+                id="terms">Condiciones Legales</a>&nbsp;y la&nbsp;<a href="#" id="privacyStatement">Política de
+                Privacidad</a>&nbsp;de la empresa.</p>
+              <br>
+            </form>
+
+        </form>
       </div>
+
     </div>
-  </section>
-  <section class="gender container-fluid">
-    <div class="row">
-      <div class="col-sm">
-        <img src="img/men.jpg" id="hombres">
-      </div>
-      <div class="col-sm">
-        <img src="img/womenathlete.jpg" id="mujeres">
-      </div>
-    </div>
-  </section>
-
-<!--LANZAMIENTOS-->
-
-  <section class="lanzamientos container-fluid text-center" id="lanzamientos">
-    <h1 class="display-4 text-dark">LANZAMIENTOS</h1>
-        <div class="row">
-      <div class="col-4">
-        <img src="./img/whiteshoe.jpg" alt="">
-      </div>
-      <div class="col-4">
-        <img src="./img/adidasblack.jpg" alt="">
-      </div>
-      <div class="col-4">
-        <img src="./img/colournike.jpg" alt="">
-      </div>
-    </div>
-  </section>
+  </div>
 
 
-<section class="bannerbottom container-fluid text-right">
-<h1 class="display-5 text-light">DESAFIA TUS LIMITES</h1>
-</section>
 
+
+
+<br>
 
 
   <!-- FOOTER -->
@@ -111,11 +93,11 @@
           <p class="pt-4 text-dark">Copyright ©2019 Todos los Derechos Resevados</p>
         </div>
         <div class="col-sm-4 text-center">
-          <a href="PreguntasFrecuentes.html">
+          <a href="preguntasFrecuentes.php">
             <h5 class="text-dark">PREGUNTAS FRECUENTES</h5>
           </a>
         </div>
-        <div class="col-sm-4 social text-right pt-1">
+        <div class="col-sm-4 social text-right pt-0">
           <h5 class="text-dark">FOLLOW US</h5>
           <p class="text-dark">Social Media</p>
           <div class="column text-dark">
@@ -141,6 +123,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
-
 </body>
+
 </html>

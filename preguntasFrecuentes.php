@@ -5,7 +5,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>SMN</title>
+        <title>SMNK</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
         <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet" <link
@@ -21,8 +21,8 @@
     <div class="container-fluid">
 
 
-      <a class="navbar-brand" href="Index.html">
-        <i class="fab fa-stripe-s fa-2x"></i></i>MN</a>
+      <a class="navbar-brand" href="index.php">
+        <i class="fab fa-stripe-s fa-2x"></i></i>MNK</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-align-right text-dark"></i>
@@ -31,15 +31,15 @@
 
         <ul class="navbar-nav mg-auto">
           <li class="nav-item active"><a class="nav-link" href="#lanzamientos">LANZAMIENTOS</a></li>
-          <li class="nav-item"><a class="nav-link" href="Index.html">HOMBRES</a></li>
-          <li class="nav-item"><a class="nav-link" href="Index.html">MUJERES</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.php">HOMBRES</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.php">MUJERES</a></li>
           <li><a href="#Ofertas" class="nav-link">OFERTAS</a></li>
         </ul>
       </div>
       <div class="navmenu">
         <a href="#"><i class="fas fa-search"></i></a>
         <a href="#"><i class="fas fa-shopping-cart"></i></a>
-        <a href="iniciarCuenta.html"><i class="fas fa-user-circle"></i></a>
+        <a href="iniciarCuenta.php"><i class="fas fa-user-circle"></i></a>
       </div>
     </div>
   </nav>
@@ -93,7 +93,7 @@
       <td class="part-2" width=75% valign=top >
        <section id="answer-1">
               <h3>¿Tengo que registrarme antes de comprar?</h3>
-              Sí debés tener un usuario SMN, podés hacerlo ingresando <a href="#">haciendo click aquí</a>.
+              Sí, debés tener un usuario SMNK, podés hacerlo ingresando <a href="registrarse.php">haciendo click aquí</a>.
             </section>
             <br></br>
             <section id="answer-2">
@@ -140,7 +140,7 @@
             <br></br>
             <section id="answer-8">
               <h3>¿Qué comprobante se me otorga al comprar por el sitio web?</h3>
-              De acuerdo a la normativa vigente de la A.F.I.P. emitimos facturas tipo "B" (consumidor final), excepto a aquellos clientes que soliciten otro tipo de factura ("A" o "B" exento), para la cual deberán brindarnos los datos fiscales vía mail a <a href="#">info@smn.com.ar</a>
+              De acuerdo a la normativa vigente de la A.F.I.P. emitimos facturas tipo "B" (consumidor final), excepto a aquellos clientes que soliciten otro tipo de factura ("A" o "B" exento), para la cual deberán brindarnos los datos fiscales vía mail a <a href="#">info@smnk.com.ar</a>
             </section>
             <br></br>
             <section id="answer-9">
@@ -155,16 +155,16 @@
       </td>
      </tr>
     </table>
-  
-  
-  
-  
+
+
+
+
 <section class="bannerbottom container-fluid text-right bg-black">
     <h1 class="display-5 text-light">SMN</h1>
     </section>
-    
-    
-    
+
+
+
       <!-- FOOTER -->
       <footer>
         <div class="container-fluid text-left">
@@ -174,7 +174,7 @@
               <p class="pt-4 text-dark">Copyright ©2019 Todos los Derechos Resevados</p>
             </div>
             <div class="col-sm-4 text-center">
-              <a href="PreguntasFrecuentes.html">
+              <a href="preguntasFrecuentes.php">
                 <h5 class="text-dark">PREGUNTAS FRECUENTES</h5>
               </a>
             </div>
