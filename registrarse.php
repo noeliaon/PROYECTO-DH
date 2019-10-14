@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
+<head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -85,6 +85,7 @@
 
 
   <!-- FOOTER -->
+  
   <footer>
     <div class="container-fluid text-left">
       <div class="row">
@@ -97,7 +98,7 @@
             <h5 class="text-dark">PREGUNTAS FRECUENTES</h5>
           </a>
         </div>
-        <div class="col-sm-4 social text-right pt-0">
+        <div class="col-sm-4 social text-right pt-1">
           <h5 class="text-dark">FOLLOW US</h5>
           <p class="text-dark">Social Media</p>
           <div class="column text-dark">
@@ -110,9 +111,8 @@
       </div>
     </div>
   </footer>
-
-
-
+  
+  
 
 
   <!--SCRIPTS -->
