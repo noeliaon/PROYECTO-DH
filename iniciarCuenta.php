@@ -63,7 +63,7 @@ if($_POST){
 
 <?php include "secciones\header.php"; ?>
 
-<div class="ingresar">
+<div></div>
 <div class="container-fluid col-sm-2">
 <h1 class="display-3 mt-5">INGRESAR</h1>
 <form class="text-center mt-auto pl-5" action="#" method="POST">
@@ -97,7 +97,7 @@ if($_POST){
           </form>
      </div>
 
-     </div>
+
 
   <div class="bannerbottom bg-white container-fluid text-center">
     <h1 class="display-5 text-dark">¿No tenés cuenta?<a href="registrarse.php">Registrate</a></h1>
