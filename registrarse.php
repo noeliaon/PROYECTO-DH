@@ -1,6 +1,98 @@
+<?php
+$nombre = "";
+$pw = "";
+$pwrep = "";
+$apellido ="";
+$mail = "";
+$errorNombre = "";
+$errorApellido = "";
+$errorEmail = "";
+$errorPassword = "";
+$errorAvatar = "";
+$usuariosEnJSON = file_get_contents("usuarios.json");
+$usuarios = json_decode($usuariosEnJSON,true);
+
+
+if($_POST){
+      $errores = false;
+    if($_POST["nombre"] == ""){
+        $errorNombre = "Ingresar un nombre";
+        $errores = true;
+    }else if(strlen($_POST["nombre"]) < 3){
+        $errorNombre = "El nombre debe tener por lo menos 3 caracteres";
+        $errores = true;
+    }else{
+      $nombre = $_POST["nombre"];
+    }
+    if($_POST["apellido"] == ""){
+        $errorApellido = "Ingrese un apellido";
+        $errores = true;
+    }
+    else {
+      $apellido = $_POST["apellido"];
+    }
+ 
+    $nuevoEmail=$_POST["email"];
+    $match=false;
+    foreach($usuarios as $usuarioJson){
+      
+             if ($usuarioJson["email"]==$nuevoEmail){
+                  $match=true;
+                                 break;
+              }
+     }
+
+
+    if(filter_var($_POST["email"], FILTER_VALIDATE_EMAIL == false)){
+       $errorEmail = "Mail invalido";
+       $errores = true;
+
+    }elseif($match==true){
+            $errores = true;
+            $errorEmail = "Ya hay un usuario registrado con ese email";
+
+    }else {
+      $mail = $_POST["email"];
+    }
+
+
+    if($_POST["pw"] == "" || $_POST["pwrep"] == ""){
+        $errorPassword = "Ingresar password";
+        $errores = true;
+    }else if($_POST["pw"] != $_POST["pwrep"]){
+        $errorPassword = "Password no coincide";
+        $errores = true;
+    }else if(strlen($_POST["pw"]) < 6){
+        $errorPassword = "Al menos 6 caracteres";
+        $errores = true;
+    }else{
+    
+        $pw = $_POST["pw"];
+        $pwrep = $_POST["pw"];
+       $contrasenia = password_hash($_POST["pw"],PASSWORD_DEFAULT);
+    }
+   
+    if(!$errores){
+              $usuario = [
+            "id"=> md5($_POST["nombre"]),
+            "nombre" => $_POST["nombre"],
+            "apellido" => $_POST["apellido"],
+            "email" => $_POST["email"],
+            "password" => $contrasenia
+        ];
+         $usuariosEnJSON = file_get_contents("usuarios.json");
+        $usuarios = json_decode($usuariosEnJSON);
+        $usuarios[] = $usuario;
+        $nuevosUsuariosEnJSON = json_encode($usuarios);
+        file_put_contents("usuarios.json",$nuevosUsuariosEnJSON);
+        header('Location:loginB.php?email='.urlencode($mail));
+        exit;
+    }
+}
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,53 +106,55 @@
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <link rel="stylesheet" href="css/Style.css" />
        </head>
-
 <body>
-  <!-- NAVEGACION -->
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.php">
-        <i class="fab fa-stripe-s fa-2x"></i></i>MNK</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-align-right text-dark"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
 
-        <ul class="navbar-nav mg-auto">
-          <li class="nav-item active"><a class="nav-link" href="#lanzamientos">LANZAMIENTOS</a></li>
-          <li class="nav-item"><a class="nav-link" href="#hombres">HOMBRES</a></li>
-          <li class="nav-item"><a class="nav-link" href="#mujeres">MUJERES</a></li>
-          <li><a href="#Ofertas" class="nav-link">OFERTAS</a></li>
-        </ul>
+
+<?php include "secciones\header.php";?>
+
+
+  <div class="container-fluid col-sm-3">
+    <div class="row text-center text-dark">
+    
+       
+        <form enctype="multipart/form-data" method="POST" action="">
+        <h1 class="display-3 py-5 text-center">REGISTRARSE</h1>
+        
+        <div class="form group">
+        <span class="col-sm" style="color:red;font-size:14px;"><?=$errorNombre;?></span>
+        <input type="text" class="form-control" name="nombre" placeholder="Ingresa tu Nombre" value="<?=$nombre?>"required>
       </div>
-      <div class="navmenu">
-        <a href="#"><i class="fas fa-search"></i></a>
-        <a href="#"><i class="fas fa-shopping-cart"></i></a>
-        <a href="iniciarCuenta.php"><i class="fas fa-user-circle"></i></a>
-      </div>
-    </div>
-  </nav>
 
 
+        <div class="form group pt-5">
+        <input type="text" class="form-control" name="apellido" placeholder="Apellido" value="<?=$apellido?>" required><br></br>
+        </div>
 
-  <div class="register container-fluid">
-    <div class="row">
-      <div class="col-sm-6 text-center text-light">
-        <h1 class="display-2 py-5">REGISTRARSE</h1>
-        <form enctype="text/plain" method="POST" action="index.php">
-          <input type="text" name="user" placeholder="Nombre" minlength="3" required=true><br></br>
-          <input type="text" name="user" placeholder="Apellido" minlength="3" required=true><br></br>
-          <input type="date" name="date" placeholder="Fecha de Nacimiento" minlength="8" required=true><br></br>
-          <input type="email" name="correo" placeholder="E-mail" required=true><br></br>
-          <input type="password" name="direccion" placeholder="Password" minlength="8" required=true><br></br>
-          <input type="password" name="direccion" placeholder="Repetir Password" minlength="8" required=true><br></br>
-                   <br>
-          <a class="btn btn-outline-light" href="#" role="button">Registrarse</a>
+        <div class="form group py-1">
+        <input type="date" class="form-control" name="date" placeholder="Fecha de Nacimiento" required><br></br>
+        </div>
+
+        <div class="form group py-1">
+        <span style="color:red;font-size:14px;"><?=$errorEmail;?></span> 
+        <input type="email" class="form-control" name="email" placeholder="E-mail" value="<?=$mail?>" required><br></br>
+        </div>
+
+        <div class="form group py-1">
+        <span style="color:red;font-size:14px;"><?=$errorPassword;?></span>
+        <input type="password" class="form-control" name="pw" placeholder="Password" value="<?=$pw?>" required><br></br>
+        </div>
+
+        <div class="form group py-1">
+        <input type="password"  class="form-control" name="pwrep" placeholder="Repetir Password" value="<?=$pwrep?>" required><br></br>
+        </div>
+
+          <button class="btn btn-outline-dark ml-5 mb-5" type="submit" role="button">Registrarse</button>
+          </form>
+
+      
+                       
 
           <form action="../../form-result.php" method="post" target="_blank">
-            <br>
-            <br>
+           
             <p><input type="checkbox" name="Noticias" value="likes"> Me gustaría recibir noticias sobre productos y
                 promociones de SMNK</p></form>
                 <br>
@@ -83,33 +177,10 @@
 
 <br>
 
+<?php include "secciones/footer.php"; ?>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="container-fluid text-left">
-      <div class="row">
-        <div class="col-sm-4">
-          <h5 class="text-dark">About</h5>
-          <p class="pt-4 text-dark">Copyright ©2019 Todos los Derechos Resevados</p>
-        </div>
-        <div class="col-sm-4 text-center">
-          <a href="preguntasFrecuentes.php">
-            <h5 class="text-dark">PREGUNTAS FRECUENTES</h5>
-          </a>
-        </div>
-        <div class="col-sm-4 social text-right pt-0">
-          <h5 class="text-dark">FOLLOW US</h5>
-          <p class="text-dark">Social Media</p>
-          <div class="column text-dark">
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-youtube"></i>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+
+
 
 
 

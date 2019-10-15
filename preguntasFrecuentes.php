@@ -16,34 +16,7 @@
        </head>
 
 <body>
-  <!-- NAVEGACION -->
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-
-
-      <a class="navbar-brand" href="index.php">
-        <i class="fab fa-stripe-s fa-2x"></i></i>MNK</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-align-right text-dark"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-
-        <ul class="navbar-nav mg-auto">
-          <li class="nav-item active"><a class="nav-link" href="#lanzamientos">LANZAMIENTOS</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.php">HOMBRES</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.php">MUJERES</a></li>
-          <li><a href="#Ofertas" class="nav-link">OFERTAS</a></li>
-        </ul>
-      </div>
-      <div class="navmenu">
-        <a href="#"><i class="fas fa-search"></i></a>
-        <a href="#"><i class="fas fa-shopping-cart"></i></a>
-        <a href="iniciarCuenta.php"><i class="fas fa-user-circle"></i></a>
-      </div>
-    </div>
-  </nav>
-
+<?php include "secciones\header.php"; ?>
 
 
 
@@ -163,34 +136,9 @@
     <h1 class="display-5 text-light">SMN</h1>
     </section>
 
+    <?php include "secciones/footer.php"; ?>
 
 
-      <!-- FOOTER -->
-      <footer>
-        <div class="container-fluid text-left">
-          <div class="row">
-            <div class="col-sm-4">
-              <h5 class="text-dark">About</h5>
-              <p class="pt-4 text-dark">Copyright ©2019 Todos los Derechos Resevados</p>
-            </div>
-            <div class="col-sm-4 text-center">
-              <a href="preguntasFrecuentes.php">
-                <h5 class="text-dark">PREGUNTAS FRECUENTES</h5>
-              </a>
-            </div>
-            <div class="col-sm-4 social text-right pt-0">
-              <h5 class="text-dark">FOLLOW US</h5>
-              <p class="text-dark">Social Media</p>
-              <div class="column text-dark">
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-youtube"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
   <!--SCRIPTS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

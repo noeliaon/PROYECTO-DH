@@ -1,3 +1,46 @@
+<?php
+$wrong="";
+$wrongUser="";
+
+if (!$_GET && !$_POST){
+    $fkEmail="";
+    $fkPassword="";
+}
+if ($_GET){
+    $fkEmail=$_GET["email"];
+    $fkPassword="";
+}
+if($_POST){
+     $fkEmail=$_POST["email"];
+     $fkPassword=$_POST["password"];
+}
+
+if($_POST){
+    $usersJSON = file_get_contents("usuarios.json");
+    $usuarios = json_decode($usersJSON,true);
+     foreach($usuarios as $usuario){
+              if($usuario["email"] == $_POST["email"]){
+                  if(password_verify($_POST["password"],$usuario["password"])){
+                  session_start();
+                  $_SESSION["email"] = $_POST["email"];
+                  $_SESSION["password"] =$_POST["password"];
+                  header("location:index.php");
+      }
+    } else {
+       $wrong="DATOS INVALIDOS";
+    }
+  }
+}
+
+if($_POST){
+   if(isset($_POST["recordarme"])){
+       setcookie("email",$_POST["email"]);
+       setcookie("password", password_hash($_POST["password"],PASSWORD_DEFAULT));
+     }
+ }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,102 +55,57 @@
           href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/Style.css" />
+        <link rel="stylesheet" href="css/Style.css">
        </head>
 
-
 <body>
-  <!-- NAVEGACION -->
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
 
 
-      <a class="navbar-brand" href="index.php">
-        <i class="fab fa-stripe-s fa-2x"></i></i>MNK</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-align-right text-dark"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
+<?php include "secciones\header.php"; ?>
 
-        <ul class="navbar-nav mg-auto">
-          <li class="nav-item active"><a class="nav-link" href="#lanzamientos">LANZAMIENTOS</a></li>
-          <li class="nav-item"><a class="nav-link" href="#hombres">HOMBRES</a></li>
-          <li class="nav-item"><a class="nav-link" href="#mujeres">MUJERES</a></li>
-          <li><a href="#Ofertas" class="nav-link">OFERTAS</a></li>
-        </ul>
-      </div>
-      <div class="navmenu">
-        <a href="#"><i class="fas fa-search"></i></a>
-        <a href="#"><i class="fas fa-shopping-cart"></i></a>
-        <a href="iniciarCuenta.php"><i class="fas fa-user-circle"></i></a>
-      </div>
-    </div>
-  </nav>
+<div class="ingresar">
+<div class="container-fluid col-sm-2">
+<h1 class="display-3 mt-5">INGRESAR</h1>
+<form class="text-center mt-auto pl-5" action="#" method="POST">
+              <div class="row">
+
+                <span class="wrong"><?=$wrong?></span>
+                <span class="wrong"><?=$wrongUser?></span>
+
+                <div class="form-group mt-5 ml-1">
+                  <input class="" type="email" placeholder="E-mail" name="email"
+                  value=<?=$fkEmail?>>
+                  </div>
 
 
+                  <div class="form-group ml-1">
+                  <input class=""type="password" placeholder="Password" name="password"
+                  value=<?=$fkPassword?>>
+                  </div>
 
-  <!--HEADER -->
-  <header class="login-header container-fluid">
-    <div class="row">
-           <div class="col-sm-12 text-left">
-        <h1 class="display-5 text-light">Login</h1>
-        <br>
-        <form enctype="text/plain" method="POST" action="index.php">
-          <input type="text" name="user" placeholder="Usuario" minlength="3" required=true>
-          <br>
-          <input type="password" name="direccion" placeholder="Contraseña" minlength="8" required=true><br></br>
-          <a class="btn btn-outline-light text-center" href="#" role="button">Ingresar</a>
-          <br>
-        </form>
-        <br>
+                  <div class="form-group form-check pl-5">
+                    <label class="form-check-label" for="remember">Recordarme</label>
+                    <input class="" type="checkbox" name="recordarme"
+                    value="recordarme">
+                 <br>
+                    <button class="btn btn-outline-dark mt-3" type="submit" role="button">INGRESAR</button>
+                 
+                  </div>
 
-        </form>
-      </div>
+                
+              </div>
+          </form>
+     </div>
 
-
-      </div>
-
-  </header>
-
-
-
-
-
-
+     </div>
 
   <div class="bannerbottom bg-white container-fluid text-center">
-    <h1 class="display-5 text-dark">¿No tenés cuenta? <a href="registrarse.php">Registrate</a></h1>
+    <h1 class="display-5 text-dark">¿No tenés cuenta?<a href="registrarse.php">Registrate</a></h1>
   </div>
 
 
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="container-fluid text-left mt-5">
-      <div class="row">
-        <div class="col-sm-4">
-          <h5 class="text-dark">About</h5>
-          <p class="pt-4 text-dark">Copyright ©2019 Todos los Derechos Resevados</p>
-        </div>
-        <div class="col-sm-4 text-center">
-          <a href="preguntasFrecuentes.php">
-            <h5 class="text-dark">PREGUNTAS FRECUENTES</h5>
-          </a>
-        </div>
-        <div class="col-sm-4 social text-right pt-0">
-          <h5 class="text-dark">FOLLOW US</h5>
-          <p class="text-dark">Social Media</p>
-          <div class="column text-dark">
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-youtube"></i>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <?php include "secciones/footer.php"; ?>
 
 
 
@@ -123,5 +121,4 @@
 
 
 </body>
-
 </html>

@@ -63,8 +63,12 @@ section {
 }
 
 /*  PERFECT BALANCE */
+
+
+
 .balance {
   margin-top: 4%;
+  background: black;
 }
 
 .balance h2 {
@@ -83,6 +87,9 @@ section {
 
 }
 
+.launch {
+  background: black;
+}
 .lanzamientos h1 {
   font-weight: lighter;
   margin-bottom: 10%;
@@ -120,59 +127,28 @@ footer {
 }
 
 /* LOGIN */
-.login-header {
-  background-image: url(../img/water.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-top: 1%;
-  width: 100%;
-  height: 500px;
+.ingresar {
+  background-image: url(../img/naranja.jpg);
 }
-
-.login-header h1 {
-  font-weight: lighter;
-  padding-top: 5%;
-  padding-right: 2%;
-}
-
-.login-header h3 a {
-  color: white;
-
-  font-weight: lighter;
-}
-
-.btn {
-  margin-right: 2.5%;
-}
-
-
 /*REGISTRARSE*/
-.register {
-  margin-top: 1%;
-  background: url(../img/naranja.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
-.register p {
+
+
+.registerr p {
   font-weight: lighter;
   font-size: 24px;
-  color: dark;
+  color: black;
 }
 
-.register h1 {
+.registerr h1 {
   font-weight: lighter;
 }
 
-.register .btn {
+.registerr .btn {
   margin-left: 1%;
 }
 
-.register img {
-  width: 100%;
-}
+
 
 
 /*PREGUNTAS FRECUENTES*/

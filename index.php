@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,40 +13,11 @@
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <link rel="stylesheet" href="css/Style.css" />
        </head>
-
 <body>
-  <!-- NAVEGACION -->
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
 
+<?php include "secciones\header.php"; ?>
 
-      <a class="navbar-brand" href="index.php">
-        <i class="fab fa-stripe-s fa-2x"></i></i>MNK</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-align-right text-dark"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-
-        <ul class="navbar-nav mg-auto">
-          <li class="nav-item active"><a class="nav-link" href="#lanzamientos">LANZAMIENTOS</a></li>
-          <li class="nav-item"><a class="nav-link" href="#hombres">HOMBRES</a></li>
-          <li class="nav-item"><a class="nav-link" href="#mujeres">MUJERES</a></li>
-          <li><a href="#Ofertas" class="nav-link">OFERTAS</a></li>
-        </ul>
-      </div>
-      <div class="navmenu">
-        <a href="#"><i class="fas fa-search"></i></a>
-        <a href="#"><i class="fas fa-shopping-cart"></i></a>
-        <a href="iniciarCuenta.php"><i class="fas fa-user-circle"></i></a>
-      </div>
-    </div>
-  </nav>
-
-
-
-  <!--HEADER -->
-  <header class="main-header text-white py-5">
+  <div class="main-header text-white py-5">
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-8 text-right">
@@ -55,15 +25,14 @@
         </div>
       </div>
     </div>
-  </header>
+  </div>
+
 
 <!-- PERFECT BALANCE-->
   <section class="balance" class="container-fluid">
     <div class="row">
-      <div class="col-sm text-center mg-auto text-dark">
+      <div class="col-sm text-center mg-auto text-white">
         <h1 class="display-4">PERFECT BALANCE</h1>
-
-
       </div>
     </div>
   </section>
@@ -81,7 +50,9 @@
 <!--LANZAMIENTOS-->
 
   <section class="lanzamientos container-fluid text-center" id="lanzamientos">
-    <h1 class="display-4 text-dark">LANZAMIENTOS</h1>
+  <div class="launch container-fluid">
+  <h1 class="display-4 text-white">LANZAMIENTOS</h1>
+  </div>  
         <div class="row">
       <div class="col-4">
         <img src="./img/whiteshoe.jpg" alt="">
@@ -97,39 +68,12 @@
 
 
 <section class="bannerbottom container-fluid text-right">
-<h1 class="display-5 text-light">DESAFIA TUS LIMITES</h1>
+  <h1 class="display-5 text-light">DESAFIA TUS LIMITES</h1>
 </section>
 
 
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="container-fluid text-left">
-      <div class="row">
-        <div class="col-sm-4">
-          <h5 class="text-dark">About</h5>
-          <p class="pt-4 text-dark">Copyright ©2019 Todos los Derechos Resevados</p>
-        </div>
-        <div class="col-sm-4 text-center">
-          <a href="preguntasFrecuentes.php">
-            <h5 class="text-dark">PREGUNTAS FRECUENTES</h5>
-          </a>
-        </div>
-        <div class="col-sm-4 social text-right pt-1">
-          <h5 class="text-dark">FOLLOW US</h5>
-          <p class="text-dark">Social Media</p>
-          <div class="column text-dark">
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-youtube"></i>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-
+<?php include "secciones/footer.php"; ?>
 
 
 
