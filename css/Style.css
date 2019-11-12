@@ -7,6 +7,7 @@ section {
   overflow-x: hidden;
 }
 
+
 /* NAVEGACION */
 .navbar {
   font-family: 'Noto sans', sans-serif;
@@ -115,7 +116,7 @@ section {
 footer {
   background: rgba(1, 1, 1, 0.1);
   overflow-x: hidden;
-  padding: 40px;
+ 
 }
 
 .social {
@@ -128,10 +129,10 @@ footer {
 
 /* LOGIN */
 .ingresar {
-  background-image: url(../img/naranja.jpg);
-}
-/*REGISTRARSE*/
+    background-image: url(../img/naranja.jpg);
 
+  }
+/*REGISTRARSE*/
 
 
 .registerr p {
@@ -211,9 +212,7 @@ td {
     padding: 6vmin 4vmin;
   }
 
-  footer .row .col-md-2 {
-    margin-top: 8vmin;
-  }
+
 }
 
 @media only screen and (max-width: 720px) {
@@ -229,5 +228,6 @@ td {
   .section-4 .carousel-inner {
     margin-left: -4vmin;
   }
+
 
 }

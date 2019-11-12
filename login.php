@@ -1,45 +1,18 @@
 <?php
-$wrong="";
-$wrongUser="";
-
-if (!$_GET && !$_POST){
-    $fkEmail="";
-    $fkPassword="";
-}
-if ($_GET){
-    $fkEmail=$_GET["email"];
-    $fkPassword="";
-}
+$errorLogin = "";
 if($_POST){
-     $fkEmail=$_POST["email"];
-     $fkPassword=$_POST["password"];
-}
+    require_once 'secciones/Validador.php';
+    $validador = new Validador;
 
-if($_POST){
-    $usersJSON = file_get_contents("usuarios.json");
-    $usuarios = json_decode($usersJSON,true);
-     foreach($usuarios as $usuario){
-              if($usuario["email"] == $_POST["email"]){
-                  if(password_verify($_POST["password"],$usuario["password"])){
-                  session_start();
-                  $_SESSION["email"] = $_POST["email"];
-                  $_SESSION["password"] =$_POST["password"];
-                  header("location:index.php");
-      }
-    } else {
-       $wrong="DATOS INVALIDOS";
+    $errorLogin = $validador->login($_POST["email"],$_POST["password"]);
+
+    if($errorLogin == ""){
+        //aca logueo.
     }
-  }
+
 }
 
-if($_POST){
-   if(isset($_POST["recordarme"])){
-       setcookie("email",$_POST["email"]);
-       setcookie("password", password_hash($_POST["password"],PASSWORD_DEFAULT));
-     }
- }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -63,44 +36,41 @@ if($_POST){
 
 <?php include "secciones\header.php"; ?>
 
-<div></div>
+<h1 class="display-4 text-center mt-5  text-dark" style="background: dark;">Iniciar Sesion</h1>
 <div class="container-fluid col-sm-2">
-<h1 class="display-3 mt-5">INGRESAR</h1>
-<form class="text-center mt-auto pl-5" action="#" method="POST">
-              <div class="row">
 
-                <span class="wrong"><?=$wrong?></span>
-                <span class="wrong"><?=$wrongUser?></span>
+<form class="text-center" method="POST">
+              
 
-                <div class="form-group mt-5 ml-1">
-                  <input class="" type="email" placeholder="E-mail" name="email"
-                  value=<?=$fkEmail?>>
+                
+                <div class="form-group col-sm mt-5">
+                  <input class="" type="email" placeholder="E-mail" name="email">
+                  
                   </div>
 
 
-                  <div class="form-group ml-1">
-                  <input class=""type="password" placeholder="Password" name="password"
-                  value=<?=$fkPassword?>>
+                  <div class="form-group col-sm">
+                  <input class=""type="password" placeholder="Password" name="password">
+                  
                   </div>
 
-                  <div class="form-group form-check pl-5">
+                  <div class="form-group form-check col-sm">
                     <label class="form-check-label" for="remember">Recordarme</label>
                     <input class="" type="checkbox" name="recordarme"
                     value="recordarme">
                  <br>
+                 <span style="color:red;font-size:10px;"><?=$errorLogin;?></span>
                     <button class="btn btn-outline-dark mt-3" type="submit" role="button">INGRESAR</button>
                  
                   </div>
-
-                
-              </div>
+                </div>
           </form>
      </div>
 
 
 
   <div class="bannerbottom bg-white container-fluid text-center">
-    <h1 class="display-5 text-dark">¿No tenés cuenta?<a href="registrarse.php">Registrate</a></h1>
+    <h1 class="display-5 text-dark">¿No tenés cuenta?<a href="register.php">Registrate</a></h1>
   </div>
 
 

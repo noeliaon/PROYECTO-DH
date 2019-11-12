@@ -25,7 +25,7 @@
       <div class="navmenu">
         <a href="#"><i class="fas fa-search"></i></a>
         <a href="#"><i class="fas fa-shopping-cart"></i></a>
-        <a href="iniciarCuenta.php"><i class="fas fa-user-circle"></i></a>
+        <a href="login.php"><i class="fas fa-user-circle"></i></a>
       </div>
     </div>
   </nav>

@@ -66,7 +66,7 @@
       <td class="part-2" width=75% valign=top >
        <section id="answer-1">
               <h3>¿Tengo que registrarme antes de comprar?</h3>
-              Sí, debés tener un usuario SMNK, podés hacerlo ingresando <a href="registrarse.php">haciendo click aquí</a>.
+              Sí, debés tener un usuario SMNK, podés hacerlo ingresando <a href="register.php">haciendo click aquí</a>.
             </section>
             <br></br>
             <section id="answer-2">
