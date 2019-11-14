@@ -1,6 +1,6 @@
 <? php
     class conectar{
-        private $servidor="localhost";
+        private $servidor="localhost:8080";
         private $usuario="root";
         private $bd="smnk";
         private $password="";
