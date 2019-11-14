@@ -57,9 +57,9 @@ if($_POST){
  
   
     
-  <div class="container">
+  <div class="container mt-5 pt-5">
 
-  <h2 class="display-4 text-center mt-5">Crea tu cuenta</h1>
+  <p class="display-4 text-center mt-5">Crea tu cuenta</p>
 
       <form class="" method="POST" enctype="multipart/form-data">
         <div class="form-group">
@@ -74,7 +74,7 @@ if($_POST){
         <div class="form-group">
           <label for="email" class="col-sm control-label"></label>
           <div class="col-md-9">
-            <input type="text" class="form-control " name="email" placeholder="E-mail">
+            <input type="email" class="form-control " name="email" placeholder="E-mail">
             <span style="color:red;font-size:12px;"><?=$errorEmail != "#" ? $errorEmail : '';?></span>
           </div>
         </div>
@@ -106,10 +106,6 @@ if($_POST){
 
 
       </form>
-  
-
-  <?php include "secciones/footer.php"; ?>
-
 
 
 

@@ -69,6 +69,7 @@ section {
 
 .balance {
   margin-top: 4%;
+  margin-bottom: 4%;
   background: black;
 }
 
@@ -78,7 +79,8 @@ section {
 
 .gender img {
   width: 100%;
-  padding: 10%;
+  display: block;
+  margin-bottom: 30px;
 
 }
 
@@ -93,12 +95,13 @@ section {
 }
 .lanzamientos h1 {
   font-weight: lighter;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
 .lanzamientos img {
   width: 100%;
   display: block;
+
 }
 
 
@@ -127,11 +130,7 @@ footer {
   padding-right: 10px;
 }
 
-/* LOGIN */
-.ingresar {
-    background-image: url(../img/naranja.jpg);
 
-  }
 /*REGISTRARSE*/
 
 
@@ -197,10 +196,11 @@ td {
 
 
 /*RESPONSIVE*/
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 992px) {
   .navmenu {
     display: none;
   }
+
   }
 
 @media only screen and (max-width: 768px) {
@@ -228,6 +228,5 @@ td {
   .section-4 .carousel-inner {
     margin-left: -4vmin;
   }
-
-
 }
+ 

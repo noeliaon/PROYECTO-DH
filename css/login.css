@@ -1,0 +1,83 @@
+body {
+    font-family: 'Noto sans', sans-serif;
+}
+
+
+.sidenav {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    padding-top: 60px;
+  
+    
+}
+
+.main-text a {
+    text-decoration: none;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+}
+
+
+
+@media screen and (max-width: 450px) {
+  
+    .register-form{
+        margin-top: 10%;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .main{
+        margin-left: 40%; 
+        
+    }
+
+    .sidenav{
+        width: 40%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        margin-left: 10%;
+    }
+
+  
+    .login-form{
+        margin-top: 50%;
+        margin-left: 60%;
+    }
+
+    .register-form{
+        margin-top: 20%;
+    }
+}
+
+
+.login-main-text{
+    margin-top: 25%;
+    padding: 80px;
+    color: #fff;
+}
+
+.login-main-text h2{
+    font-weight: 300;
+}
+
+.btn-black{
+    background-color: #000 !important;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-secondary {
+    margin-left: 40%;
+    margin-top: 10%;
+}
+
+.btn .btn-secondary .btn-light a {
+    text-decoration: none;
+    
+}

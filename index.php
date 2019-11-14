@@ -16,12 +16,12 @@
 <body>
 
 <?php include "secciones\header.php"; ?>
-
-  <div class="main-header text-white py-5">
+<div class="wrapper">
+  <div class="main-header text-white">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-8 text-right">
-          <h1><i class="fab fa-stripe-s fa-2x py-5"></i>MNK SPORTWEAR</h1>
+        <div class="col-sm text-center ml-5">
+          <h1><i class="fab fa-stripe-s fa-2x mg-auto"></i>MNK SPORTWEAR</h1>
         </div>
       </div>
     </div>
@@ -39,10 +39,10 @@
   <section class="gender container-fluid">
     <div class="row">
       <div class="col-sm">
-        <img src="img/men.jpg" id="hombres">
+        <img src="img/naranja.jpg" id="hombres">
       </div>
       <div class="col-sm">
-        <img src="img/womenathlete.jpg" id="mujeres">
+        <img src="img/enelaire.jpg" id="mujeres">
       </div>
     </div>
   </section>
@@ -51,29 +51,29 @@
 
   <section class="lanzamientos container-fluid text-center" id="lanzamientos">
   <div class="launch container-fluid">
-  <h1 class="display-4 text-white">LANZAMIENTOS</h1>
+  <h1 class="display-4 text-white">DESCUBRI</h1>
   </div>  
         <div class="row">
       <div class="col-4">
-        <img src="./img/whiteshoe.jpg" alt="">
+        <img src="./img/gray.jpg" alt="">
       </div>
       <div class="col-4">
-        <img src="./img/adidasblack.jpg" alt="">
+        <img src="./img/nike3.jpg" alt="">
       </div>
       <div class="col-4">
-        <img src="./img/colournike.jpg" alt="">
+        <img src="./img/revolt.jpg" alt="">
       </div>
     </div>
   </section>
 
 
-<section class="bannerbottom container-fluid text-right">
-  <h1 class="display-5 text-light">DESAFIA TUS LIMITES</h1>
+<section class="bannerbottom container-fluid text-center mb-5">
+  <h1 class="display-5 text-light">SMK</h1>
 </section>
+</div>
 
 
 
-<?php include "secciones/footer.php"; ?>
 
 
 

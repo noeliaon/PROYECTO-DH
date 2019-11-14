@@ -7,7 +7,9 @@ if($_POST){
     $errorLogin = $validador->login($_POST["email"],$_POST["password"]);
 
     if($errorLogin == ""){
-        //aca logueo.
+        session_start();
+        $_SESSION["id_usuario_logueado"] = $id_user;
+        header("Location:index.php");
     }
 
 }
@@ -16,78 +18,58 @@ if($_POST){
 
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>SMNK</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet" <link
-          href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/Style.css">
+        <link rel="stylesheet" href="css/login.css">
+     
        </head>
-
 <body>
 
-
-<?php include "secciones\header.php"; ?>
-
-<h1 class="display-4 text-center mt-5  text-dark" style="background: dark;">Iniciar Sesion</h1>
-<div class="container-fluid col-sm-2">
-
-<form class="text-center" method="POST">
-              
-
-                
-                <div class="form-group col-sm mt-5">
-                  <input class="" type="email" placeholder="E-mail" name="email">
+<div class="sidenav">
+              <div class="login-main-text">
+            <h2 class="display-3">No estas registrado?</h2><br>
+         
+            
+            <a href="register.php"><button type="submit" class="btn btn-secondary btn-light">Registrate</button></a>
+         </div>
+      </div>
+      <div class="main">
+         <div class="col-md-6 col-sm-12 text-center py-5">
+            <div class="login-form">
+              <p class="display-3">Ingresar</p>
+            <form method="POST">
+                  <div class="form-group">
+                     
+                     <input type="email" class="form-control" name="email" placeholder="Email">
+                  </div>
+                  <div class="form-group">
+                      <input type="password" class="form-control" name="password" placeholder="Contraseña">
+                     <span style="color:red;font-size:10px;"><?=$errorLogin;?></span>
+                  </div>
+                  <div class="remember">
+                            <input type="checkbox" name="recordarme" value="recordar"> <span>Recordar</span>
+                        </div>
+                        <div class="mt-3">
+                            <a href="forgot.php" style="color:black; text-decoration:none;">Olvidaste la contrasena?</a>
+                        </div>
+                  <button type="submit" class="btn btn-black mt-3">Login</button>
                   
-                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+      
 
+    
 
-                  <div class="form-group col-sm">
-                  <input class=""type="password" placeholder="Password" name="password">
-                  
-                  </div>
-
-                  <div class="form-group form-check col-sm">
-                    <label class="form-check-label" for="remember">Recordarme</label>
-                    <input class="" type="checkbox" name="recordarme"
-                    value="recordarme">
-                 <br>
-                 <span style="color:red;font-size:10px;"><?=$errorLogin;?></span>
-                    <button class="btn btn-outline-dark mt-3" type="submit" role="button">INGRESAR</button>
-                 
-                  </div>
-                </div>
-          </form>
-     </div>
-
-
-
-  <div class="bannerbottom bg-white container-fluid text-center">
-    <h1 class="display-5 text-dark">¿No tenés cuenta?<a href="register.php">Registrate</a></h1>
-  </div>
-
-
-
-  <?php include "secciones/footer.php"; ?>
-
-
-
-
-  <!--SCRIPTS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-  </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-  </script>
 
 
 </body>
