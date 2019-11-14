@@ -12,6 +12,9 @@ body {
     
 }
 
+.sidenav .gohome a {
+    text-decoration: none;
+}
 .main-text a {
     text-decoration: none;
 }
@@ -60,6 +63,10 @@ body {
     margin-top: 25%;
     padding: 80px;
     color: #fff;
+}
+
+.login-main-text a{
+text-decoration: none;
 }
 
 .login-main-text h2{

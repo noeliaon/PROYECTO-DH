@@ -9,7 +9,7 @@ if($_POST){
     if($errorLogin == ""){
         session_start();
         $_SESSION["id_usuario_logueado"] = $id_user;
-        header("Location:index.php");
+        header("Location:profile.php");
     }
 
 }
@@ -33,9 +33,16 @@ if($_POST){
        </head>
 <body>
 
+
+
+
 <div class="sidenav">
               <div class="login-main-text">
-            <h2 class="display-3">No estas registrado?</h2><br>
+              <a href="index.php">
+                  <p class="display-3 text-center text-white">
+        <i class="fab fa-stripe-s fa-2x"></i>Mk</p></a>
+       
+       
          
             
             <a href="register.php"><button type="submit" class="btn btn-secondary btn-light">Registrate</button></a>

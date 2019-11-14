@@ -8,7 +8,7 @@
 
 
       <a class="navbar-brand" href="index.php">
-        <i class="fab fa-stripe-s fa-2x"></i></i>MNK</a>
+        <i class="fab fa-stripe-s fa-2x"></i></i>Mk</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-align-right text-dark"></i>

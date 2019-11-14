@@ -52,6 +52,7 @@ section {
   background-size: cover;
 }
 
+
 .main-header h1 {
   font-weight: lighter;
   padding-top: 15%;
@@ -67,15 +68,7 @@ section {
 
 
 
-.balance {
-  margin-top: 4%;
-  margin-bottom: 4%;
-  background: black;
-}
 
-.balance h2 {
-  font-weight: lighter;
-}
 
 .gender img {
   width: 100%;
@@ -84,25 +77,6 @@ section {
 
 }
 
-/*LANZAMIENTOS*/
-.lanzamientos {
-  margin-top: 5%;
-
-}
-
-.launch {
-  background: black;
-}
-.lanzamientos h1 {
-  font-weight: lighter;
-  margin-bottom: 5%;
-}
-
-.lanzamientos img {
-  width: 100%;
-  display: block;
-
-}
 
 
 /* FOOTER BANNER */

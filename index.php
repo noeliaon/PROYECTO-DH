@@ -15,13 +15,13 @@
        </head>
 <body>
 
-<?php include "secciones\header.php"; ?>
+<?php include_once "secciones\header.php"; ?>
 <div class="wrapper">
   <div class="main-header text-white">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm text-center ml-5">
-          <h1><i class="fab fa-stripe-s fa-2x mg-auto"></i>MNK SPORTWEAR</h1>
+        <div class="col-sm text-right mr-5 mt-5 pr-5">
+          <h1 class="display-4"><i class="fab fa-stripe-s fa-2x"></i>MK SPORTWEAR</h1>
         </div>
       </div>
     </div>
@@ -29,51 +29,32 @@
 
 
 <!-- PERFECT BALANCE-->
-  <section class="balance" class="container-fluid">
+  
+
+<section class="balance" class="container-fluid">
     <div class="row">
-      <div class="col-sm text-center mg-auto text-white">
-        <h1 class="display-4">PERFECT BALANCE</h1>
+      <div class="col-sm text-center mg-auto">
+        <p class="display-4 text-light pt-3">PERFECT BALANCE</p>
       </div>
     </div>
   </section>
+  
+  
   <section class="gender container-fluid">
-    <div class="row">
-      <div class="col-sm">
-        <img src="img/naranja.jpg" id="hombres">
-      </div>
-      <div class="col-sm">
-        <img src="img/enelaire.jpg" id="mujeres">
-      </div>
-    </div>
-  </section>
-
-<!--LANZAMIENTOS-->
-
-  <section class="lanzamientos container-fluid text-center" id="lanzamientos">
-  <div class="launch container-fluid">
-  <h1 class="display-4 text-white">DESCUBRI</h1>
-  </div>  
-        <div class="row">
-      <div class="col-4">
-        <img src="./img/gray.jpg" alt="">
-      </div>
-      <div class="col-4">
-        <img src="./img/nike3.jpg" alt="">
-      </div>
-      <div class="col-4">
-        <img src="./img/revolt.jpg" alt="">
+    
+  
+  <div class="row">
+      
+        <img class="col-sm" src="img/train.jpg">
+      
+        <img class="col-sm" src="img/evo.jpg">
       </div>
     </div>
   </section>
-
-
-<section class="bannerbottom container-fluid text-center mb-5">
-  <h1 class="display-5 text-light">SMK</h1>
-</section>
 </div>
 
 
-
+<?php include_once "secciones/footer.php"; ?>
 
 
 
